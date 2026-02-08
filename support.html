@@ -404,15 +404,15 @@
                 <!-- Contact Form -->
                 <div class="contact-form-wrapper fade-in-up delay-1">
                     <h2>Send Us a Message</h2>
-                    <form id="contactForm" action="https://formsubmit.co/73dbaf8e54d02be7b8487abe7dbc1f4d"
-                        method="POST">
-                        <!-- FormSubmit Configuration -->
-                        <input type="hidden" name="_subject" value="ReclaimHeight Support Request">
-                        <input type="hidden" name="_captcha" value="false">
-                        <input type="hidden" name="_template" value="table">
-                        <input type="hidden" name="_next" value="https://reclaimheight.com/support.html?success=true">
+                    <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+                        <!-- Web3Forms Configuration -->
+                        <input type="hidden" name="access_key" value="69c286bd-1352-4dbb-838e-8d4f98b8f642">
+                        <input type="hidden" name="subject" value="ReclaimHeight Support Request">
+                        <input type="hidden" name="from_name" value="ReclaimHeight Support">
+                        <input type="hidden" name="redirect"
+                            value="https://jacobattheplague.github.io/support.html?success=true">
                         <!-- Honeypot for spam prevention -->
-                        <input type="text" name="_honey" style="display:none">
+                        <input type="checkbox" name="botcheck" class="hidden" style="display:none">
 
                         <div class="form-group">
                             <label for="name">Your Name</label>
