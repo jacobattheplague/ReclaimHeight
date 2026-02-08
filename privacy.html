@@ -5,117 +5,509 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy - ReclaimHeight</title>
+    <meta name="description"
+        content="Privacy Policy for ReclaimHeight - Learn how we collect, use, and protect your data.">
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* Legal Page Styles */
+        .legal-hero {
+            min-height: 40vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            padding-top: 120px;
+            padding-bottom: 40px;
+        }
+
+        .legal-hero .hero-bg-effects {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            overflow: hidden;
+        }
+
+        .legal-header {
+            text-align: center;
+        }
+
+        .legal-header h1 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 1rem;
+        }
+
+        .last-updated {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            background: rgba(0, 217, 255, 0.1);
+            border: 1px solid rgba(0, 217, 255, 0.3);
+            border-radius: 50px;
+            font-size: 0.85rem;
+            color: var(--accent-cyan);
+            margin-top: 16px;
+        }
+
+        /* Content Section */
+        .legal-content {
+            padding: 60px 0 100px;
+        }
+
+        .legal-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .legal-section {
+            margin-bottom: 48px;
+        }
+
+        .legal-section h2 {
+            font-size: 1.5rem;
+            color: var(--text-primary);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .section-number {
+            width: 36px;
+            height: 36px;
+            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-pink));
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: #000;
+            flex-shrink: 0;
+        }
+
+        .legal-section h3 {
+            font-size: 1.1rem;
+            color: var(--accent-cyan);
+            margin-bottom: 12px;
+            margin-top: 24px;
+        }
+
+        .legal-section p {
+            font-size: 1rem;
+            line-height: 1.8;
+            color: var(--text-secondary);
+            margin-bottom: 16px;
+        }
+
+        .legal-section ul {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 16px 0;
+        }
+
+        .legal-section ul li {
+            position: relative;
+            padding-left: 24px;
+            margin-bottom: 12px;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        .legal-section ul li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--accent-green);
+            font-weight: 600;
+        }
+
+        /* Info Card */
+        .info-card {
+            background: var(--bg-card);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            padding: 24px;
+            margin: 24px 0;
+        }
+
+        .info-card.warning {
+            border-color: rgba(255, 149, 0, 0.3);
+            background: rgba(255, 149, 0, 0.05);
+        }
+
+        .info-card p {
+            margin-bottom: 0;
+        }
+
+        .info-card .icon {
+            font-size: 1.5rem;
+            margin-bottom: 12px;
+        }
+
+        /* Data Table */
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 24px 0;
+            background: var(--bg-card);
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid var(--glass-border);
+        }
+
+        .data-table th,
+        .data-table td {
+            padding: 16px 20px;
+            text-align: left;
+        }
+
+        .data-table th {
+            background: rgba(0, 217, 255, 0.1);
+            color: var(--accent-cyan);
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .data-table td {
+            color: var(--text-secondary);
+            border-top: 1px solid var(--glass-border);
+            font-size: 0.95rem;
+        }
+
+        .data-table tr:hover td {
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        .service-name {
+            color: var(--text-primary);
+            font-weight: 500;
+        }
+
+        /* Contact Card */
+        .contact-card {
+            background: linear-gradient(135deg, rgba(0, 217, 255, 0.1), rgba(255, 0, 153, 0.1));
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 32px;
+            text-align: center;
+            margin-top: 48px;
+        }
+
+        .contact-card h3 {
+            font-size: 1.25rem;
+            color: var(--text-primary);
+            margin-bottom: 12px;
+        }
+
+        .contact-card p {
+            margin-bottom: 16px;
+        }
+
+        .contact-card a {
+            color: var(--accent-cyan);
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .contact-card a:hover {
+            text-decoration: underline;
+        }
+
+        /* Copyright */
+        .legal-copyright {
+            text-align: center;
+            padding: 32px 0;
+            border-top: 1px solid var(--glass-border);
+            margin-top: 60px;
+        }
+
+        .legal-copyright p {
+            margin: 0;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .legal-hero {
+                padding-top: 100px;
+            }
+
+            .legal-section h2 {
+                font-size: 1.25rem;
+            }
+
+            .data-table {
+                display: block;
+                overflow-x: auto;
+            }
+
+            .data-table th,
+            .data-table td {
+                padding: 12px 16px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
 </head>
 
 <body>
+
+    <!-- Navigation -->
     <nav class="navbar">
-        <div class="logo"><a href="index.html">ReclaimHeight</a></div>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">📐</span>
+                ReclaimHeight
+            </a>
+            <div class="nav-links">
+                <a href="index.html#features">Features</a>
+                <a href="index.html#how-it-works">How It Works</a>
+                <a href="support.html">Support</a>
+                <a href="#" class="nav-cta">Download</a>
+            </div>
+        </div>
     </nav>
 
-    <div class="container section">
-        <h1>Privacy Policy for ReclaimHeight</h1>
-        <p><strong>Last Updated:</strong> February 6, 2026</p>
+    <!-- Hero Section -->
+    <header class="legal-hero">
+        <div class="hero-bg-effects">
+            <div class="hero-glow glow-1"></div>
+            <div class="hero-glow glow-2"></div>
+        </div>
+        <div class="container legal-header fade-in-up">
+            <span class="section-badge">Legal</span>
+            <h1>Privacy <span class="text-gradient">Policy</span></h1>
+            <p class="subheadline" style="max-width: 600px; margin: 0 auto;">Your privacy matters to us. Learn how we
+                collect, use, and protect your information.</p>
+            <div class="last-updated">
+                <span>📅</span>
+                Last Updated: February 8, 2026
+            </div>
+        </div>
+    </header>
 
-        <h2>1. Introduction</h2>
-        <p>ReclaimHeight ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains
-            what information we collect, how we use it, and how we protect it when you use our mobile application
-            ("App").</p>
+    <!-- Content Section -->
+    <section class="legal-content">
+        <div class="legal-container">
 
-        <h2>2. Information We Collect</h2>
+            <!-- Section 1 -->
+            <div class="legal-section fade-in-up">
+                <h2><span class="section-number">1</span> Introduction</h2>
+                <p>ReclaimHeight ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy
+                    explains what information we collect, how we use it, and how we protect it when you use our mobile
+                    application ("App").</p>
+            </div>
 
-        <h3>Account Information</h3>
-        <p>Name, email address, age, gender, and height — used to create your profile and personalize your experience.
-        </p>
+            <!-- Section 2 -->
+            <div class="legal-section fade-in-up">
+                <h2><span class="section-number">2</span> Information We Collect</h2>
 
-        <h3>Health & Fitness Data</h3>
-        <p>Posture analysis results, exercise activity, and height tracking data — used to provide posture improvement
-            recommendations and track your progress over time.</p>
-        <p><em>This data is considered sensitive health information and is handled with additional care.</em></p>
+                <h3>Account Information</h3>
+                <p>Name, email address, age, gender, and height — used to create your profile and personalize your
+                    experience.</p>
 
-        <h3>Camera & Photos</h3>
-        <p>We request access to your camera and photo library solely to perform posture analysis.</p>
-        <p>Images are processed to generate analysis data. We do not store raw images on our servers. Analysis results
-            are stored securely to track your progress.</p>
+                <h3>Health & Fitness Data</h3>
+                <p>Posture analysis results, exercise activity, and height tracking data — used to provide posture
+                    improvement recommendations and track your progress over time.</p>
 
-        <h3>Usage & Crash Data</h3>
-        <ul>
-            <li>We collect anonymous usage data (e.g., screens visited, features used) through Firebase Analytics to
-                improve the App.</li>
-            <li>We use Firebase Crashlytics to collect crash reports and diagnostic data to identify and fix bugs.</li>
-        </ul>
+                <div class="info-card warning">
+                    <div class="icon">⚠️</div>
+                    <p>This data is considered <strong>sensitive health information</strong> and is handled with
+                        additional care.</p>
+                </div>
 
-        <h2>3. How We Use Your Information</h2>
-        <ul>
-            <li>To provide and personalize the ReclaimHeight service</li>
-            <li>To perform AI-based posture and height analysis</li>
-            <li>To track and display your progress over time</li>
-            <li>To improve App functionality, stability, and user experience</li>
-            <li>To manage your subscription and account</li>
-        </ul>
+                <h3>Camera & Photos</h3>
+                <p>We request access to your camera and photo library solely to perform posture analysis.</p>
+                <p>Images are sent to Google's Gemini AI service for posture analysis. For logged-in users, posture
+                    images are stored securely in Firebase Storage to enable progress tracking and report history.
+                    Images are only accessible to the authenticated user who uploaded them.</p>
 
-        <h2>4. Data Sharing</h2>
-        <p><strong>We do not sell your personal information.</strong></p>
-        <p>We share data only with the following third-party service providers, who process it on our behalf:</p>
+                <h3>Usage & Crash Data</h3>
+                <ul>
+                    <li>We collect anonymous usage data (e.g., screens visited, features used) through Firebase
+                        Analytics to improve the App.</li>
+                    <li>We use Firebase Crashlytics to collect crash reports and diagnostic data to identify and fix
+                        bugs.</li>
+                </ul>
+            </div>
 
-        <table class="policy-table">
-            <thead>
-                <tr>
-                    <th>Service</th>
-                    <th>Purpose</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Firebase (Google)</td>
-                    <td>Authentication, cloud database, analytics, and crash reporting</td>
-                </tr>
-                <tr>
-                    <td>Superwall</td>
-                    <td>Subscription and paywall management</td>
-                </tr>
-            </tbody>
-        </table>
+            <!-- Section 3 -->
+            <div class="legal-section fade-in-up">
+                <h2><span class="section-number">3</span> How We Use Your Information</h2>
+                <ul>
+                    <li>To provide and personalize the ReclaimHeight service</li>
+                    <li>To perform AI-based posture and height analysis using Google's Gemini AI</li>
+                    <li>To track and display your progress over time</li>
+                    <li>To improve App functionality, stability, and user experience</li>
+                    <li>To manage your subscription and account</li>
+                </ul>
+            </div>
 
-        <p>These providers have their own privacy policies and are contractually obligated to protect your data.</p>
+            <!-- Section 4 -->
+            <div class="legal-section fade-in-up">
+                <h2><span class="section-number">4</span> Data Sharing</h2>
+                <p><strong>We do not sell your personal information.</strong></p>
+                <p>We share data only with the following third-party service providers, who process it on our behalf:
+                </p>
 
-        <h2>5. Data Storage & Security</h2>
-        <p>Your data is stored securely using Firebase cloud services with encryption in transit and at rest. We
-            implement industry-standard security measures to protect your information. However, no method of electronic
-            transmission or storage is 100% secure.</p>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Service</th>
+                            <th>Purpose</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="service-name">Firebase (Google)</span></td>
+                            <td>Authentication, cloud storage, database, analytics, and crash reporting</td>
+                        </tr>
+                        <tr>
+                            <td><span class="service-name">Google Gemini AI</span></td>
+                            <td>Posture image analysis and AI processing</td>
+                        </tr>
+                        <tr>
+                            <td><span class="service-name">Superwall</span></td>
+                            <td>Subscription and paywall management</td>
+                        </tr>
+                    </tbody>
+                </table>
 
-        <h2>6. Data Retention</h2>
-        <p>We retain your data for as long as your account is active. You may delete your account and associated data at
-            any time through the App settings.</p>
+                <p>These providers have their own privacy policies and are contractually obligated to protect your data.
+                </p>
+            </div>
 
-        <h2>7. Children's Privacy</h2>
-        <p>ReclaimHeight is not intended for children under 13. We do not knowingly collect personal information from
-            children under 13. If we learn we have collected such data, we will delete it promptly.</p>
+            <!-- Section 5 -->
+            <div class="legal-section fade-in-up">
+                <h2><span class="section-number">5</span> Data Storage & Security</h2>
+                <p>Your data is stored securely using Firebase cloud services with encryption in transit and at rest.
+                    Posture images are stored in Firebase Storage and are accessible only to the authenticated user.</p>
+                <p>We implement industry-standard security measures to protect your information. However, no method of
+                    electronic transmission or storage is 100% secure.</p>
+            </div>
 
-        <h2>8. Your Rights</h2>
-        <p>You have the right to:</p>
-        <ul>
-            <li>Access and review your personal data</li>
-            <li>Correct inaccurate data</li>
-            <li>Delete your account and data (via App settings)</li>
-            <li>Request a copy of your data by contacting us</li>
-        </ul>
+            <!-- Section 6 -->
+            <div class="legal-section fade-in-up">
+                <h2><span class="section-number">6</span> Data Retention</h2>
+                <p>We retain your data for as long as your account is active. You may delete your account and associated
+                    data at any time through the App settings.</p>
+            </div>
 
-        <h2>9. Changes to This Policy</h2>
-        <p>We may update this Privacy Policy from time to time. We will notify you of significant changes by posting the
-            updated policy within the App or via email.</p>
+            <!-- Section 7 -->
+            <div class="legal-section fade-in-up">
+                <h2><span class="section-number">7</span> Children's Privacy</h2>
+                <p>ReclaimHeight is not intended for children under 13. We do not knowingly collect personal information
+                    from children under 13. If we learn we have collected such data, we will delete it promptly.</p>
+            </div>
 
-        <h2>10. Contact Us</h2>
-        <p>If you have questions about this Privacy Policy or your data, contact us at: <a
-                href="mailto:support@reclaimheight.com">support@reclaimheight.com</a></p>
-    </div>
+            <!-- Section 8 -->
+            <div class="legal-section fade-in-up">
+                <h2><span class="section-number">8</span> Your Rights</h2>
+                <p>You have the right to:</p>
+                <ul>
+                    <li>Access and review your personal data</li>
+                    <li>Correct inaccurate data</li>
+                    <li>Delete your account and data (via App settings)</li>
+                    <li>Request a copy of your data by contacting us</li>
+                </ul>
+            </div>
 
+            <!-- Section 9 -->
+            <div class="legal-section fade-in-up">
+                <h2><span class="section-number">9</span> Changes to This Policy</h2>
+                <p>We may update this Privacy Policy from time to time. We will notify you of significant changes by
+                    posting the updated policy within the App or via email.</p>
+            </div>
+
+            <!-- Section 10 -->
+            <div class="legal-section fade-in-up">
+                <h2><span class="section-number">10</span> Contact Us</h2>
+                <p>If you have questions about this Privacy Policy or your data, contact us at:</p>
+
+                <div class="contact-card">
+                    <h3>📧 Get in Touch</h3>
+                    <p>We're happy to answer any questions about your privacy.</p>
+                    <a href="mailto:jubaljacobplagereinc@protonmail.com">jubaljacobplagereinc@protonmail.com</a>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="legal-copyright fade-in-up">
+                <p>© 2026 ReclaimHeight. All rights reserved.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p class="copyright">&copy; 2026 ReclaimHeight. All rights reserved.</p>
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <span class="logo-icon">📐</span>
+                        ReclaimHeight
+                    </a>
+                    <p>Stand taller. Feel better. Be confident.</p>
+                </div>
+                <div class="footer-links-group">
+                    <div class="footer-col">
+                        <h4>Product</h4>
+                        <a href="index.html#features">Features</a>
+                        <a href="index.html#how-it-works">How It Works</a>
+                        <a href="index.html#app-showcase">Screenshots</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Legal</h4>
+                        <a href="privacy.html">Privacy Policy</a>
+                        <a href="terms.html">Terms of Service</a>
+                        <a href="support.html">Support</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="copyright">© 2026 ReclaimHeight. All rights reserved.</p>
+            </div>
         </div>
     </footer>
+
+    <script>
+        // Scroll Animation Logic
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in-up').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Navbar scroll effect
+        const navbar = document.querySelector('.navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
 </body>
 
 </html>
